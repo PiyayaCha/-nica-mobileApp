@@ -1,0 +1,23 @@
+.flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+ion-card-title{
+	text-align: center;
+}
+
+ion-button [color="secondary"]{
+	margin-top: 10px;
+}
+
+ion-card-content p{
+	text-align: center;
+	font-weight: bold;
+}
+
+ion-label{
+	font-size: 12px;
+}

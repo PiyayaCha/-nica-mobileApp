@@ -1,0 +1,247 @@
+<!-- Header -->    
+<div class="ion-page" id="main-content">
+    <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon routerLink="/notification" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>My Account</ion-title>
+  </ion-toolbar>
+
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="person-circle-outline" size="large"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>Username</h2>
+        <p>useremail@gmail.com</p>
+      </ion-label>
+      <ion-chip routerLink="/login">
+        <ion-label>Sign In</ion-label>
+      </ion-chip>
+    </ion-item>
+   </ion-list>
+
+     <ion-content>
+      <p><span id="header-list">MY PROFILE</span></p>
+      <ion-list>
+      <ion-item id="open-credentials-modal">
+        <ion-label>
+          <h3>Username</h3>
+          <p>useremail@gmail.com</p><br>
+          <h3>Password</h3>
+          <p>............</p>
+        </ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+      <ion-item id="open-agreement-modal">
+        <ion-label>
+          <h3>User Agreement</h3>
+        </ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+      <ion-item id="open-policy-modal">
+        <ion-label>
+          <h3>Personal Information Protection Policy</h3>
+        </ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+     </ion-list>
+
+     <p><span id="header-list">PERSONAL INFORMATION</span></p>
+      <ion-list>
+      <ion-item id="open-personalinfo-modal">
+        <ion-label>
+          <h3>Manage Personal Information</h3>
+        </ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h3>Logout</h3>
+        </ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+     </ion-list>
+
+     <!-- <ion-button>Logout</ion-button> -->
+     
+      <!--Modals-->
+
+  <!-- modal A -->
+       <ion-modal
+      trigger="open-credentials-modal"
+      [initialBreakpoint]="0.25"
+      [breakpoints]="[0, 0.25, 0.5, 0.75]"
+      handleBehavior="cycle"
+    >
+      <ng-template>
+        <ion-content class="ion-padding">
+          <div class="ion-margin-top">
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button (click)="cancel()">Cancel</ion-button>
+                </ion-buttons>
+                <ion-title><span id="modal-title">Change Profile</span></ion-title>
+                <ion-buttons slot="end">
+                  <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+
+            <ion-item>
+              <ion-label position="stacked">Enter your username</ion-label>
+              <ion-input type="text" [(ngModel)]="username"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Enter your new password</ion-label>
+              <ion-input type="text" [(ngModel)]="pass"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Confirm new Password</ion-label>
+              <ion-input type="text" [(ngModel)]="newpass"></ion-input>
+            </ion-item>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+  <!-- modal B -->
+    <ion-modal trigger="open-agreement-modal">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title><span id="modal-title">User Agreement</span></ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+            dicta. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+            dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque, dicta. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+            dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. 
+          </p>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <!-- modal C -->
+    <ion-modal trigger="open-policy-modal">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title><span id="modal-title">Protection Policy</span></ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+            dicta. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+            dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque, dicta. <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+            dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. 
+          </p>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <!-- modal D -->
+    <ion-modal trigger="open-personalinfo-modal">
+    <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+          <p><span id="header-list">MY PROFILE</span></p>
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3>Name</h3>
+                <p>User Name</p><br>
+              </ion-label>
+              <ion-icon name="chevron-forward"></ion-icon>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>
+                <h3>Address</h3>
+                <p>#134 User's Address</p><br>
+              </ion-label>
+              <ion-icon name="chevron-forward"></ion-icon>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>
+                <h3>Birthdate</h3>
+                <p>1998, August 20</p><br>
+              </ion-label>
+              <ion-icon name="chevron-forward"></ion-icon>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>
+                <h3>Contact Number</h3>
+                <p>0919 321 8765</p><br>
+              </ion-label>
+              <ion-icon name="chevron-forward"></ion-icon>
+            </ion-item>
+          </ion-list>
+          </ion-content>
+
+      </ng-template>
+    </ion-modal>
+        
+
+    </ion-content>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button routerLink="/main" tab="home" >
+        <ion-icon name="home-outline" size="small"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/book" tab="book">
+        <ion-icon name="calendar-clear-outline" size="small"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/ar-home" tab="hairstyles">
+        <ion-icon name="aperture-outline" size="small"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/notification" tab="notif">
+        <ion-icon name="notifications-outline" size="small"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/user" tab="user">
+        <ion-icon name="person-outline" size="small"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+
+</div>
+

@@ -1,0 +1,105 @@
+<!-- Navigation -->
+<div class="ion-page" id="main-content">
+ <ion-header>
+  <ion-toolbar>
+	  <ion-buttons slot="start">
+	    <ion-icon name="chevron-back-outline" routerLink="/main"></ion-icon>
+	  </ion-buttons>
+	  <ion-buttons slot="primary">
+	    <ion-button>
+	      <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+	    </ion-button>
+	  </ion-buttons>
+
+	  <ion-title>Updates</ion-title>
+  </ion-toolbar>
+
+	  <!--Segment -->
+	<ion-segment value="promo">
+      <ion-segment-button value="appointments">
+        <ion-label>Notifications</ion-label>
+
+      </ion-segment-button>
+      <ion-segment-button value="promo">
+        <ion-label>Messages</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+ </ion-header>
+
+ <ion-content fullscreen>
+	<!-- Appointments segment -->
+	<ion-list>
+	 <ion-item-sliding>
+	  <ion-item>
+	  <ion-label>
+	  	<ion-icon name="clipboard-outline" size="small"></ion-icon>
+	    <p>Follow-up service</p>
+	    <h3>Semirebond Treatment</h3><br>
+	    <h4><span>August 2, 2022 | Tuesday</span></h4>
+	    <h4><span>Time: 9:00 am</span></h4>
+	  </ion-label>
+	  </ion-item>
+	</ion-item-sliding>
+
+	 <ion-item-sliding>
+	  <ion-item>
+	  <ion-label>
+	  	<ion-icon name="calendar-outline" size="small"></ion-icon>
+	    <p>Booked Appointment</p>
+	    <h3>Hair Rebond</h3><br>
+	    <h4><span>April 15, 2022 | Friday</span></h4>
+	    <h4><span>Time: 10:00 am</span></h4>
+	  </ion-label>
+	  	<ion-icon name="checkmark-done" size="large" id="checkmark-icon"></ion-icon>
+	  </ion-item>
+	</ion-item-sliding>
+
+	<ion-item-sliding>
+	  <ion-item>
+	  <ion-label>
+	  	<ion-icon name="clipboard-outline" size="small"></ion-icon>
+	    <p>Follow-up Service</p>
+	    <h3>Rebond Treatment</h3><br>
+	    <h4><span>February 15, 2021 | Friday</span></h4>
+	    <h4><span>Time: 10:00 am</span></h4>
+	  </ion-label>
+	   	<ion-icon name="checkmark-done" size="large" id="checkmark-icon"></ion-icon>
+	  </ion-item>
+	</ion-item-sliding>
+
+	<ion-item-sliding>
+	  <ion-item>
+	  <ion-label>
+	  	<ion-icon name="calendar-outline" size="small"></ion-icon>
+	    <p>Booked Appointment</p>
+	    <h3>Hair Rebond</h3><br>
+	    <h4><span>August 25, 2021 | Thursday</span></h4>
+	    <h4><span>Time: 10:00 am</span></h4>
+	  </ion-label>
+	  	<ion-icon name="checkmark-done" size="large" id="checkmark-icon"></ion-icon>
+	  </ion-item>
+	</ion-item-sliding>
+	</ion-list>
+
+ </ion-content>
+
+ 	<ion-tab-bar slot="bottom">
+      <ion-tab-button routerLink="/main" tab="home" >
+        <ion-icon name="home-outline" size="small"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/book" tab="book">
+        <ion-icon name="calendar-clear-outline" size="small"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/ar-home" tab="hairstyles">
+        <ion-icon name="aperture-outline" size="small"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/notification" tab="notif">
+        <ion-icon name="notifications-outline" size="small"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/user" tab="user">
+        <ion-icon name="person-outline" size="small"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+</div>
+

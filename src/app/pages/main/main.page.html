@@ -1,0 +1,223 @@
+<ion-app>
+  <!-- Menu -->
+      <ion-menu side="start" content-id="main-content">
+        <ion-header>
+          <ion-toolbar translucent>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="./avatar-finn.png" />
+              </ion-avatar>
+              <ion-label>
+                <h2>UserName</h2>
+                <h3><span id="email-text">useremail@gmail.com</span></h3>
+              </ion-label>
+            </ion-item>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+          <ion-list>
+            <ion-item>
+              <ion-icon name="cut" slot="start"></ion-icon>
+              <ion-label routerLink="/ar-home">Hairstyles Filter</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="mail-unread" slot="start"></ion-icon>
+              <ion-label routerLink="/notification">Notifications</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="person" slot="start"></ion-icon>
+              <ion-label routerLink="/user">My Account</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="close-outline" slot="start"></ion-icon>
+              <ion-label routerLink="/login">Logout</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+
+  <!-- Header -->    
+      <div class="ion-page" id="main-content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="end">
+              
+              <ion-icon routerLink="/notification" name="notifications-outline" id="notification-icon"></ion-icon>
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Home</ion-title>
+          </ion-toolbar>
+        </ion-header>
+  
+        <ion-content fullscreen>
+         <ion-list>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-icon name="calendar-sharp" size="large"></ion-icon>
+            </ion-avatar>
+            <ion-label>
+              <p>Jojo Beauty Salon & Gluta Spa</p>
+              <h2>Book your appointment now.</h2>
+              <ion-button routerLink="/book" fill="outline" slot="start">Book Appointment</ion-button>
+            </ion-label>
+          </ion-item>
+         </ion-list>
+
+   
+         <ion-card>
+           <ion-card-header>
+            <ion-card-subtitle>About Us</ion-card-subtitle>
+           </ion-card-header> 
+
+           <ion-card-content>
+            <p>Jojo Beauty Salon is now open for any salon services. Come and visit Jojo Beauty Salon.
+            </p><br><br>
+            <p><ion-icon name="storefront-outline"></ion-icon> 2nd Floor Motortrade Bldg. Sto. Nino, Panabo City</p>
+            <p><ion-icon name="call-outline"></ion-icon> 09302750060 / 09102748000 TEL.NO. (084)-823-2747</p><br>
+            <p>Join us on <ion-icon name="logo-facebook"></ion-icon></p>
+           </ion-card-content>
+         </ion-card> 
+
+    
+         <ion-card>
+           <ion-card-header>
+            <ion-card-subtitle>Gallery</ion-card-subtitle>
+           </ion-card-header> 
+
+           <ion-card-content>
+              <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+                <ion-slide  style="width: 60px; height: 60px; border: 2px solid #f8f8f8">
+                    <ion-img style="pointer-events:none" src="https://drive.google.com/uc?id=1cHlSr63kTmrz8DNQZmeSPT9X_yhMldsg" alt=""></ion-img>
+                </ion-slide>
+
+                <ion-slide  style="width: 60px; height: 60px; border: 2px solid #f8f8f8">
+                    <ion-img style="pointer-events:none" src="https://drive.google.com/uc?id=1LiZhDPtZ-8QfHMpfqZFG9WWQLZjyEREU" alt=""></ion-img>
+                </ion-slide>
+
+                <ion-slide  style="width: 60px; height: 60px; border: 2px solid #f8f8f8">
+                    <ion-img style="pointer-events:none" src="https://drive.google.com/uc?id=1guI8RewNfYT7xN3j2syqPwmlEV1nx5zE" alt=""></ion-img>
+                </ion-slide>
+
+                <ion-slide  style="width: 60px; height: 60px; border: 2px solid #f8f8f8">
+                    <ion-img style="pointer-events:none" src="https://drive.google.com/uc?id=1GwtgCBqwuXCYNEXdW6qVjluHMcnnxjjA" alt=""></ion-img>
+                </ion-slide>
+
+                <ion-slide  style="width: 60px; height: 60px; border: 2px solid #f8f8f8">
+                    <ion-img style="pointer-events:none" src="https://drive.google.com/uc?id=1KLrVrFbKN6OU0i-NVfJ9dwhc0AxxykuI" alt=""></ion-img>
+                </ion-slide>
+
+                <ion-slide  style="width: 60px; height: 60px; border: 2px solid #f8f8f8">
+                    <ion-img style="pointer-events:none" src="https://drive.google.com/uc?id=1CiSIgLmVqBv7ZF8ASstrQTLMkUh0cv0G" alt=""></ion-img>
+                </ion-slide>
+              </ion-slides>
+           </ion-card-content>
+         </ion-card> 
+  
+   
+         <ion-card>
+           <ion-card-header>
+            <ion-card-subtitle>Our Services</ion-card-subtitle>
+           </ion-card-header> 
+
+           <ion-card-content>
+            <ion-list>
+            <ion-item-sliding>
+              <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://drive.google.com/uc?id=1DEQDHfQ7E2Fu0-3Wk53xhH9pD0oWCUby" />
+              </ion-avatar>
+              <ion-label>
+                <h3>Rebond</h3>
+                <p><span id="price-list">Price starts at Php 1,500</span></p>
+              </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://drive.google.com/uc?id=1yBSNd_DoZ9gPx3D6iFvSLo3Uvxv_pTy8" />
+              </ion-avatar>
+              <ion-label>
+                <h3>Hair Treatment</h3>
+                <p><span id="price-list">Price starts at Php 400</span></p>
+              </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://drive.google.com/uc?id=1bp5b-HU9UL3Jy61mRN7Xb1eNaUG3aAo2" />
+              </ion-avatar>
+              <ion-label>
+                <h3>Manicure</h3>
+                <p><span id="price-list">Price starts at Php 200</span></p>
+              </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://drive.google.com/uc?id=1n1d-VSWgzzb_x_TPhdu03Z3ayCZ-ewSs" />
+              </ion-avatar>
+              <ion-label>
+                <h3>Pedicure</h3>
+                <p><span id="price-list">Price starts at Php 200</span></p>
+              </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://drive.google.com/uc?id=1YKCHD_DboVwzDVk5jqown5wBopzf_R1A" />
+              </ion-avatar>
+              <ion-label>
+                <h3>Foot Spa</h3>
+                <p><span id="price-list">Price starts at Php 350</span></p>
+              </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://drive.google.com/uc?id=1Y1NX_U1HcZydkbB9nLWraW0yngv_A11R" />
+              </ion-avatar>
+              <ion-label>
+                <h3>Hair and Make-up</h3>
+                <p><span id="price-list">Prices vary and is for any occassion or events</span></p>
+              </ion-label>
+              </ion-item>
+             </ion-item-sliding>
+            </ion-list>
+           </ion-card-content>
+         </ion-card> 
+         
+        </ion-content>
+
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button routerLink="/main" tab="home" >
+            <ion-icon name="home-outline" size="small"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button routerLink="/book" tab="book">
+            <ion-icon name="calendar-clear-outline" size="small"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button routerLink="/ar-home" tab="hairstyles">
+            <ion-icon name="aperture-outline" size="small"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button routerLink="/notification" tab="notif">
+            <ion-icon name="notifications-outline" size="small"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button routerLink="/user" tab="user">
+            <ion-icon name="person-outline" size="small"></ion-icon>
+          </ion-tab-button>
+        </ion-tab-bar>
+
+      </div>
+
+</ion-app>
+

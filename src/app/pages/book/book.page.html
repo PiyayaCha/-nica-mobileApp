@@ -1,0 +1,73 @@
+  <!-- Header -->    
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-icon name="chevron-back-outline" routerLink="/main"></ion-icon>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button>
+          <ion-icon routerLink="/notification" name="notifications-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-title>Book Appointment</ion-title>
+    </ion-toolbar>
+
+    </ion-header>
+
+  <!-- Input for Booking -->
+  <ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Book an Appointment</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-select placeholder="Select salon service">
+           <ion-select-option value="rebond">Hair Rebond</ion-select-option>
+           <ion-select-option value="treatment">Hair Treatment</ion-select-option>
+           <ion-select-option value="manicure">Manicure</ion-select-option>
+           <ion-select-option value="pedicure">Pedicure</ion-select-option>
+           <ion-select-option value="foot spa">Foot Spa</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="fixed">Date</ion-label>
+          <ion-input type="date"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="fixed">Time</ion-label>
+          <ion-input type="time"></ion-input>
+        </ion-item>
+
+        
+        <ion-button color="secondary" size="full">Book</ion-button>
+      </ion-card-content>
+    </ion-card> 
+  </ion-content>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLink="/main" tab="home" >
+      <ion-icon name="home-outline" size="small"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/book" tab="book">
+      <ion-icon name="calendar-clear-outline" size="small"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/ar-home" tab="hairstyles">
+      <ion-icon name="aperture-outline" size="small"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/notification" tab="notif">
+      <ion-icon name="notifications-outline" size="small"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/user" tab="user">
+      <ion-icon name="person-outline" size="small"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+  </div>

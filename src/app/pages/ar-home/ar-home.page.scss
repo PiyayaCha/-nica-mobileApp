@@ -1,0 +1,43 @@
+.wrapper h1 {
+	padding: 0 0 0 20px;
+}
+
+ion-button {
+	border-radius: 100px;
+}
+
+img {
+	height: 50px;
+	weight: 50px;
+	border-radious: 25px;
+	padding-right: 20px;
+}
+
+.images-container {
+}
+
+.frame-outline {
+	border: 1px solid black;
+	padding: 0 0 40px 20px;
+	height: 80%;
+	width: 100%;
+	background-color: #000;
+}
+
+.camera-frame-outline {
+	text-align:center;
+	padding-top: 200px;
+	padding-bottom: 300px;
+}
+
+.menu-list {
+	text-align: right;
+	padding-top: 10px;
+}
+
+ion-modal #modal-1{
+	width: fit-content;
+	min-width: 250px;
+	border-radius: 10px;
+	box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
